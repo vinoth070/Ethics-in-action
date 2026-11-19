@@ -8,7 +8,7 @@ export default defineConfig(() => {
   return {
     // IMPORTANT: Replace YOUR-REPOSITORY-NAME
     // with your actual GitHub repository name.
-    base: '/YOUR-REPOSITORY-NAME/',
+    base: '/Ethics-in-action/',
 
     plugins: [
       react(),
