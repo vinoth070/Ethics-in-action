@@ -1,0 +1,271 @@
+import { PageId, QuizCategoryId } from '../types/ethics';
+
+export interface LearningPathModule {
+  id: string;
+  index: string;
+  title: string;
+  objective: string;
+  summary: string;
+  practicalActivity: string;
+  linkedVideoId: string;
+  linkedPage?: PageId;
+  linkedQuizCategory?: QuizCategoryId;
+}
+
+export interface LearningPathTrack {
+  id: 'personal-path' | 'professional-path' | 'advanced-path';
+  title: string;
+  subtitle: string;
+  level: string;
+  accent: 'blue' | 'gold' | 'indigo';
+  modules: LearningPathModule[];
+}
+
+export const LEARNING_PATHS: LearningPathTrack[] = [
+  {
+    id: 'personal-path',
+    title: 'Personal Ethics Path',
+    subtitle: 'Build a resilient inner moral compass across everyday habits, relationships, and civic dilemmas.',
+    level: 'Foundational · 8 Modules',
+    accent: 'blue',
+    modules: [
+      {
+        id: 'pp-1',
+        index: '01',
+        title: 'Understanding Personal Ethics',
+        objective: 'Define personal ethics and examine where individual moral convictions originate.',
+        summary: 'Explore how conscience, upbringing, reflection, and moral philosophy shape everyday character.',
+        practicalActivity: 'Write one paragraph in your Reflection Journal describing a personal value you refuse to compromise.',
+        linkedVideoId: 'FOoffXFpAlU',
+        linkedPage: 'personal',
+        linkedQuizCategory: 'personal',
+      },
+      {
+        id: 'pp-2',
+        index: '02',
+        title: 'Honesty',
+        objective: 'Recognize how truthfulness in small everyday moments sustains lasting trust.',
+        summary: 'Examine truthful speech, avoiding distortion or omission, and acting honestly when unobserved.',
+        practicalActivity: 'Complete the Honesty tab & lost-wallet reflection inside Personal Ethics.',
+        linkedVideoId: 'bD8Vc6Y6EIQ',
+        linkedPage: 'personal',
+      },
+      {
+        id: 'pp-3',
+        index: '03',
+        title: 'Integrity',
+        objective: 'Connect Aristotle’s virtue habits to consistent alignment between values and actions.',
+        summary: 'Learn why integrity requires keeping quiet promises even when personal convenience tempts shortcuts.',
+        practicalActivity: 'Practise the Integrity scenario in Personal Ethics and reflect on moral exemplars.',
+        linkedVideoId: 'PrvtOWEXDIQ',
+        linkedPage: 'personal',
+      },
+      {
+        id: 'pp-4',
+        index: '04',
+        title: 'Empathy',
+        objective: 'Distinguish genuine empathy from sympathy and practise active perspective-taking.',
+        summary: 'Discover how attentive listening and emotional understanding make ethical choices humane.',
+        practicalActivity: 'Try the Supporting a Friend practical situation and complete the Empathy reflection.',
+        linkedVideoId: 'yru1oKJTQro',
+        linkedPage: 'personal',
+      },
+      {
+        id: 'pp-5',
+        index: '05',
+        title: 'Respect',
+        objective: 'Uphold dignity, consent, and constructive disagreement across diverse communities.',
+        summary: 'Learn how everyday courtesy, digital consent, and protecting quieter voices build inclusive spaces.',
+        practicalActivity: 'Review the Respect value module and notice one opportunity today to amplify an overlooked voice.',
+        linkedVideoId: 'yru1oKJTQro',
+        linkedPage: 'personal',
+      },
+      {
+        id: 'pp-6',
+        index: '06',
+        title: 'Responsibility',
+        objective: 'Step up reliably for shared duties, commitments, and community spaces.',
+        summary: 'Move from passive bystander habits to proactive everyday stewardship without needing reminders.',
+        practicalActivity: 'Explore the Shared Safety Issue scenario in Personal Ethics.',
+        linkedVideoId: 'uViluUWvotg',
+        linkedPage: 'personal',
+      },
+      {
+        id: 'pp-7',
+        index: '07',
+        title: 'Accountability',
+        objective: 'Own mistakes transparently without defensiveness or blame-shifting.',
+        summary: 'Understand why swift, honest ownership repairs trust far faster than excuses.',
+        practicalActivity: 'Work through the Admitting a Costly Oversight exercise in Personal Ethics.',
+        linkedVideoId: 'bD8Vc6Y6EIQ',
+        linkedPage: 'personal',
+      },
+      {
+        id: 'pp-8',
+        index: '08',
+        title: 'Real-Life Personal Dilemmas',
+        objective: 'Apply personal values thoughtfully when empathy, loyalty, and truth collide.',
+        summary: 'Weigh consequences, duties, and character inside realistic everyday moral trade-offs.',
+        practicalActivity: 'Deliberate through "The Lost Wallet" and "A Friend Asks for Assignment Answers" in the Decision Theatre and complete the Personal Ethics Quiz.',
+        linkedVideoId: 'yg16u_bzjPE',
+        linkedPage: 'theatre',
+        linkedQuizCategory: 'personal',
+      },
+    ],
+  },
+  {
+    id: 'professional-path',
+    title: 'Professional Ethics Path',
+    subtitle: 'Master academic honesty, confidentiality, data privacy, and equitable workplace conduct.',
+    level: 'Career & Academic Readiness · 8 Modules',
+    accent: 'gold',
+    modules: [
+      {
+        id: 'prp-1',
+        index: '01',
+        title: 'Understanding Professional Ethics',
+        objective: 'Contrast personal conscience with codified professional duties and institutional trust.',
+        summary: 'See why professions establish shared standards to safeguard students, clients, and the public.',
+        practicalActivity: 'Inspect all 8 dimensions in the Ethics Face-Off Comparison matrix.',
+        linkedVideoId: 'h_sufC5nY18',
+        linkedPage: 'comparison',
+        linkedQuizCategory: 'comparison',
+      },
+      {
+        id: 'prp-2',
+        index: '02',
+        title: 'Professional Integrity',
+        objective: 'Practise transparent reporting and disclose conflicts of interest proactively.',
+        summary: 'Learn how honest metrics, conflict recusal, and resisting shortcuts protect long-term credibility.',
+        practicalActivity: 'Reveal and evaluate the Internship Product Review case in Professional Ethics.',
+        linkedVideoId: 'auePL3pYRb0',
+        linkedPage: 'professional',
+      },
+      {
+        id: 'prp-3',
+        index: '03',
+        title: 'Academic Honesty',
+        objective: 'Prevent plagiarism, patchwriting, and improper authorship across research and coursework.',
+        summary: 'Master proper paraphrasing, complete citation habits, and ethical open-source attribution.',
+        practicalActivity: 'Watch the Academic Integrity video, complete its 10-question challenge, and read the Ghost Authorship case study.',
+        linkedVideoId: '8_SxY2jpRFc',
+        linkedPage: 'professional',
+      },
+      {
+        id: 'prp-4',
+        index: '04',
+        title: 'Confidentiality',
+        objective: 'Protect privileged records and respond properly to accidental disclosures.',
+        summary: 'Apply need-to-know access, screen security, and immediate containment when files are misdirected.',
+        practicalActivity: 'Complete "The Misdirected Confidential File" simulation in the Decision Theatre.',
+        linkedVideoId: 'w82B8bXAd1s',
+        linkedPage: 'theatre',
+      },
+      {
+        id: 'prp-5',
+        index: '05',
+        title: 'Data Privacy',
+        objective: 'Apply data minimization, informed consent, and anonymization in projects and internships.',
+        summary: 'Recognize how personal data stewardship protects dignity and prevents downstream misuse.',
+        practicalActivity: 'Complete the "Responsible Data Usage in a Prototype" dilemma in the Decision Theatre.',
+        linkedVideoId: 'w82B8bXAd1s',
+        linkedPage: 'professional',
+      },
+      {
+        id: 'prp-6',
+        index: '06',
+        title: 'Fairness',
+        objective: 'Uphold objective rubrics, equitable recognition, and inclusive participation.',
+        summary: 'Counter subtle exclusion and favouritism in academic teams and workplace critiques.',
+        practicalActivity: 'Deliberate through "Noticing Unfair Treatment in a Team" in the Decision Theatre.',
+        linkedVideoId: 'yru1oKJTQro',
+        linkedPage: 'professional',
+      },
+      {
+        id: 'prp-7',
+        index: '07',
+        title: 'Teamwork',
+        objective: 'Overcome moral myopia and uphold accurate attribution across group projects.',
+        summary: 'Build reliable handoffs, early blocker alerts, and fair credit for every contributor.',
+        practicalActivity: 'Watch "Moral Myopia" and resolve "The Uncredited Teammate" dilemma.',
+        linkedVideoId: 'u8KpQatf3mw',
+        linkedPage: 'theatre',
+      },
+      {
+        id: 'prp-8',
+        index: '08',
+        title: 'Workplace Responsibility',
+        objective: 'Accept end-to-end accountability for product safety, accessibility, and public impact.',
+        summary: 'Unite technical excellence with civic stewardship and complete the Professional Ethics Quiz.',
+        practicalActivity: 'Check off your Professional Responsibility commitments and pass the Professional Ethics Quiz.',
+        linkedVideoId: '1EmvT9EDsTk',
+        linkedPage: 'quiz',
+        linkedQuizCategory: 'professional',
+      },
+    ],
+  },
+  {
+    id: 'advanced-path',
+    title: 'Advanced Ethics Path',
+    subtitle: 'Navigate leadership hazards, corporate accountability, CSR, systemic conflicts, and AI ethics.',
+    level: 'Leadership & Systems · 6 Modules',
+    accent: 'indigo',
+    modules: [
+      {
+        id: 'ap-1',
+        index: '01',
+        title: 'Leadership Ethics',
+        objective: 'Identify power-induced blind spots and foster speak-up cultures.',
+        summary: 'Examine tone at the top, ethical humility, and why inviting candid dissent prevents crises.',
+        practicalActivity: 'Watch "Ethical Leadership: Perilous at the Top" and complete its 10-question challenge.',
+        linkedVideoId: 'Nmsl1xVx7Ec',
+      },
+      {
+        id: 'ap-2',
+        index: '02',
+        title: 'Business Ethics',
+        objective: 'Navigate grey-area commercial choices balancing economic, legal, and stakeholder duties.',
+        summary: 'Understand why legal compliance is the floor rather than the ceiling of corporate stewardship.',
+        practicalActivity: 'Watch the HBS Online accountability briefing and read the Greenwashing case study.',
+        linkedVideoId: 'XjiRF_6cvcA',
+      },
+      {
+        id: 'ap-3',
+        index: '03',
+        title: 'Corporate Social Responsibility',
+        objective: 'Evaluate the four pillars of CSR and distinguish authentic impact from greenwashing.',
+        summary: 'Connect Triple Bottom Line thinking and transparent audits to long-term societal value.',
+        practicalActivity: 'Complete the CSR video + 10-question quiz and reflect on one company you admire.',
+        linkedVideoId: 'ZoKihFLCY0s',
+      },
+      {
+        id: 'ap-4',
+        index: '04',
+        title: 'Ethical Decision Making',
+        objective: 'Apply structured multi-framework reasoning (outcomes, duties, virtues, care) under pressure.',
+        summary: 'Use the 4-step ethical decision model to uncover creative alternatives in complex trade-offs.',
+        practicalActivity: 'Watch "4 Steps to Ethical Decision-Making" and complete the Mixed Ethics Challenge.',
+        linkedVideoId: 'uViluUWvotg',
+        linkedQuizCategory: 'mixed',
+      },
+      {
+        id: 'ap-5',
+        index: '05',
+        title: 'Professional Conflicts',
+        objective: 'Manage institutional conflicts of interest, vendor bias, and escalation pathways fairly.',
+        summary: 'Practise transparent written disclosure, recusal, and proportional escalation.',
+        practicalActivity: 'Read the Vendor Selection Conflict of Interest case study and log a journal reflection.',
+        linkedVideoId: 'auePL3pYRb0',
+      },
+      {
+        id: 'ap-6',
+        index: '06',
+        title: 'Technology and AI Ethics',
+        objective: 'Audit algorithms for fairness, protect digital consent, and counter deepfake harm.',
+        summary: 'Explore privacy-by-design, human-in-the-loop oversight, and responsible engineering.',
+        practicalActivity: 'Watch the AI & Data Privacy TEDx talk and analyse the Biased Hiring Algorithm case study.',
+        linkedVideoId: 'w82B8bXAd1s',
+      },
+    ],
+  },
+];

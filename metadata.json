@@ -1,0 +1,6 @@
+{
+  "name": "Ethics in Action — The Ethics Experience Centre",
+  "description": "An interactive educational experience centre exploring Personal Ethics, Professional Ethics, real-world moral decision simulations, interactive quizzes, and verified ethical resources.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

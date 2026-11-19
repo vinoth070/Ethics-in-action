@@ -1,0 +1,110 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  html.text-size-large {
+    font-size: 18px;
+  }
+
+  html.reduce-motion,
+  html.reduce-motion * {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    overflow-x: hidden;
+    transition: background-color 220ms cubic-bezier(0.16, 1, 0.3, 1), color 220ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  .dark body,
+  .dark p,
+  .dark li {
+    letter-spacing: 0.008em;
+  }
+
+  html.high-contrast body {
+    background-color: #FFFFFF;
+    color: #000000;
+  }
+
+  html.high-contrast.dark body {
+    background-color: #020617;
+    color: #FFFFFF;
+  }
+
+  html.high-contrast section,
+  html.high-contrast article,
+  html.high-contrast aside,
+  html.high-contrast header,
+  html.high-contrast footer {
+    border-color: #0F172A !important;
+  }
+
+  html.high-contrast.dark section,
+  html.high-contrast.dark article,
+  html.high-contrast.dark aside,
+  html.high-contrast.dark header,
+  html.high-contrast.dark footer {
+    border-color: #94A3B8 !important;
+  }
+
+  html.high-contrast p,
+  html.high-contrast li,
+  html.high-contrast dd,
+  html.high-contrast dt {
+    color: #0B162C;
+  }
+
+  html.high-contrast.dark p,
+  html.high-contrast.dark li,
+  html.high-contrast.dark dd,
+  html.high-contrast.dark dt {
+    color: #F8FAFC;
+  }
+
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: 2px solid #2563EB;
+    outline-offset: 2px;
+  }
+
+  .dark button:focus-visible,
+  .dark a:focus-visible,
+  .dark input:focus-visible,
+  .dark textarea:focus-visible,
+  .dark select:focus-visible {
+    outline-color: #EAB308;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}

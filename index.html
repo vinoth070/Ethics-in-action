@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ethics in Action — The Ethics Experience Centre</title>
+    <meta
+      name="description"
+      content="Every Choice Defines Who We Are. Explore Personal Ethics, Professional Ethics, interactive comparisons, moral decision simulations, quizzes, and verified ethical resources."
+    />
+    <meta property="og:title" content="Ethics in Action — The Ethics Experience Centre" />
+    <meta
+      property="og:description"
+      content="Every Choice Defines Who We Are. An interactive digital experience centre for Personal Ethics, Professional Ethics, and moral decision-making."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=IBM+Plex+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        try {
+          var savedTheme = localStorage.getItem('ethics_theme');
+          if (savedTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else if (savedTheme === 'light') {
+            document.documentElement.classList.remove('dark');
+          }
+          var savedTextSize = localStorage.getItem('ethics_text_size');
+          if (savedTextSize === 'large') {
+            document.documentElement.classList.add('text-size-large');
+          }
+          var savedReducedMotion = localStorage.getItem('ethics_reduced_motion');
+          if (savedReducedMotion === 'true') {
+            document.documentElement.classList.add('reduce-motion');
+          }
+          var savedHighContrast = localStorage.getItem('ethics_high_contrast');
+          if (savedHighContrast === 'true') {
+            document.documentElement.classList.add('high-contrast');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-[#F8F9FC] text-[#0B162C] dark:bg-[#070D1A] dark:text-[#F1F5F9] antialiased selection:bg-[#2563EB]/20 selection:text-[#0B162C] dark:selection:bg-[#EAB308]/30 dark:selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
